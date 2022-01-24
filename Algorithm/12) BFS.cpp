@@ -1,3 +1,4 @@
+// 너비 우선 탐색 : 큐 이용
 // 편의를 위해서 1부터 시작했음
 #include <iostream>
 #include <vector>

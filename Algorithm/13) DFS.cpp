@@ -1,3 +1,4 @@
+// 깊이 우선 탐색 : 재귀(스택) 이용
 #include <iostream>
 #include <vector>
 using namespace std;

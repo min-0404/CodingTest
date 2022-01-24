@@ -28,5 +28,4 @@ int main(){
 
     int y[] = {2, 3, 5, 8, 10};
     cout << BinarySearch(x, sizeof(x)/sizeof(int), 8) << endl; // 배열 x 에서 8의 인덱스 번호 탐색하기
-    
 }

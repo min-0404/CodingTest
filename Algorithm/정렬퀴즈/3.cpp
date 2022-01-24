@@ -1,4 +1,5 @@
 // 백준 2751
+// 제한시간 짧으므로 mergesort 이용
 #include <iostream>
 using namespace std;
 

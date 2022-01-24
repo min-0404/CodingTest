@@ -6,9 +6,13 @@ using namespace std;
 
 bool compare1(int a, int b){ //오름차순 설정
     return a < b;
+    //if(a < b)   return true; => 이것과 동일함
+    //else    return false;
 }
 bool compare2(int a, int b){ //내림차순 설정
     return a > b;
+    //if(a > b)     return true; => 이것과 동일함
+    //else      return false;
 }
 
 class Student

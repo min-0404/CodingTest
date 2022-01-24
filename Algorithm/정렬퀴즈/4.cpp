@@ -15,6 +15,7 @@ int main(){
     int n;
     cin >> n;
     cin.ignore();
+    
     string arr[20000];
     for(int i = 0; i < n; i++){
         string str;
