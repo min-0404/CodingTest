@@ -23,4 +23,5 @@ int dynamic(int x){ // O(N)
 
 int main(){
     cout << dynamic(30) << endl;
+    cout << "hello world";
 }
