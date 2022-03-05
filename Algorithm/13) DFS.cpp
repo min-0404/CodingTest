@@ -5,6 +5,7 @@ using namespace std;
 
 bool check[8];
 vector<int> v[8];
+
 void DFS(int start){
     int x = start;
     if(! check[x]){
@@ -46,3 +47,5 @@ int main(){
 
     DFS(1);
 }
+
+

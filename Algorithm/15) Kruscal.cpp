@@ -1,3 +1,4 @@
+// 주어진 가중치 그래프에서 최소비용 "spanning tree(신장 트리)" 만드는 방법
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -64,7 +65,7 @@ int main(){
     
     int sum = 0;
     for(int i = 0; i < v.size(); i++){
-        if(find(parent, v[i].node1, v[i].node2)) continue;
+        if(find(parent, v[i].node1, v[i].node2)) continue; // 만약 같은 그래프라면 패스
         unionParent(parent, v[i].node1, v[i].node2);
         sum += v[i].distance;
     }
