@@ -44,8 +44,6 @@ int main(){
     v[6].push_back(7);
     v[7].push_back(6);
 
-
     DFS(1);
 }
-
 

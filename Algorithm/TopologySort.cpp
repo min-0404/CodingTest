@@ -5,7 +5,7 @@
 #define MAX 10
 using namespace std;
 
-int inDegree[MAX];
+int inDegree[MAX];`
 vector<int> v[8];
 int n;
 
@@ -54,6 +54,6 @@ int main(){
     inDegree[7]++;
 
     topologySort();
-
-
 }
+
+
