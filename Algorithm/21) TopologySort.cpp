@@ -12,6 +12,8 @@ void TopologySort(){
     queue<int> q;
     vector<int> result;
 
+
+    // 일단, 들어오는 간선이 0인 노드를 큐에 삽입
     for(int i = 1; i <= N; i++){
         if(!inEdge[i])  q.push(i);
     }
@@ -38,7 +40,6 @@ void TopologySort(){
 int main(){
     cin >> N >> M;
 
-    
     for(int i = 0; i < M; i++){
         int a, b;
         cin >> a >> b;
