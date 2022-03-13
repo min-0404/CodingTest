@@ -1,24 +1,38 @@
+// 0, 1, 1, 2, 3, 5...
+
 #include <iostream>
 using namespace std;
 
-int fibo(int x){ // O(2^N) : 너무 느림
-    if(x == 1)  return 1;
+// 방법 1
+int recursive_Fibo(int x){ // O(2^N)
+    if(x == 1)  return 0;
     if(x == 2)  return 1;
-    return fibo(x-1) + fibo(x-2);
+    return recursive_Fibo(x-1) + recursive_Fibo(x-2); 
 }
 
-int d[100];
-
-int dynamic(int x){ // O(N)
-    if(x == 1)  return 1;
+// 방법 2
+int result[9999];
+int dynamic_Fibo(int x){ // O(N^2) 
+    if(x == 1)  return 0;
     if(x == 2)  return 1;
-    if(d[x] != 0)   return d[x];
-    d[x] = dynamic(x-1) + dynamic(x-2);
-    return  d[x];
+    if(!result[x])   return result[x];
+    result[x] = dynamic_Fibo(x-1) + dynamic_Fibo(x-2);
+    return result[x];
 }
 
+// 방법 3
+int result2[9999];
+int iterative_Fibo(int x){ // O(N)
+    for(int i = 2; i < x; i++){
+        result2[i] = result2[i-1] + result2[i-2];
+    }
+    return result2[x-1] + result2[x-2];
+}
 
 int main(){
-    cout << dynamic(30) << endl;
-    cout << "hello world";
+    result2[1] = 0;
+    result2[2] = 1;
+
+    cout << iterative_Fibo(10);
 }
+
