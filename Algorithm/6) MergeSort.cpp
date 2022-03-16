@@ -4,6 +4,7 @@
 #include <algorithm>
 using namespace std;
 
+// Merge 함수 : "두개"의 배열을 하나의 임시배열에 합치는 과정
 void Merge(int* arr, int start, int middle, int end){
     int* temp = new int[end - start + 1];
     int i = start;

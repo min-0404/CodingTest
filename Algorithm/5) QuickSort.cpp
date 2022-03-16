@@ -21,7 +21,7 @@ void QuickSort(int* arr, int start, int end){
         else    swap(&arr[i], &arr[j]);
     }
     QuickSort(arr, start, j - 1);
-    QuickSort(arr, j + 1, end );
+    QuickSort(arr, j + 1, end );   
 }
 
 int main(){
