@@ -1,3 +1,4 @@
+// All-pair to All-pair 의 방식
 #include <iostream>
 #define INF 1e9
 using namespace std;
@@ -50,10 +51,4 @@ int main(){
     }
 
 
-
-
-
-
-    
-    
 }

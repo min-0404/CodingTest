@@ -1,43 +1,41 @@
 #include <iostream>
 using namespace std;
+int parent[11];
 
-int getparent(int* arr, int node){
+int getParent(int* arr, int node){
     if(arr[node] == node)
         return node;
-    return getparent(arr, arr[node]);
+    return getParent(arr, arr[node]);
 }
 
-void unionparent(int* arr, int a, int b){
-    a = getparent(arr, a);
-    b = getparent(arr ,b);
+void unionParent(int* arr, int a, int b){
+    a = getParent(arr, a);
+    b = getParent(arr, b);
     if(a < b)   arr[b] = a;
     else    arr[a] = b;
 }
 
-bool find(int* arr, int a, int b){
-    a = getparent(arr, a);
-    b = getparent(arr, b);
+bool findParent(int* arr, int a, int b){
+    a = getParent(arr , a);
+    b = getParent(arr, b);
     if(a == b)  return true;
     else    return false;
 }
 
 int main(){
-    int parent[9];
-    for(int i = 0; i < 9; i ++)
+    for(int i = 1; i <= 10; i++){ // 초기에 각 정점들의 부모는 자기 자신으로 설정
         parent[i] = i;
+    }
+    // 정점 1,2,3,4 는 연결 되어있음을 구현
+    unionParent(parent, 1, 2);
+    unionParent(parent, 2, 3);
+    unionParent(parent, 3, 4);
 
-    unionparent(parent, 1, 2);
-    unionparent(parent, 2, 3);
-    unionparent(parent, 3, 4);
-    unionparent(parent, 5, 6);
-    unionparent(parent, 6, 7);
-    unionparent(parent, 7, 8);
+    // 정점 5,6,7,8 은 연결 되어있음을 구현
+    unionParent(parent, 5, 6);
+    unionParent(parent, 6, 7);
+    unionParent(parent, 7, 8);
 
-    cout << "1과 5는 연결되어있나?" << endl;
-    cout << find(parent, 1, 5) << endl;
-
-    unionparent(parent, 1, 8);
-    cout << "이제 1과 5는 연결되어있나?" << endl;
-    cout << find(parent, 1, 8) << endl;
-
+    cout << findParent(parent, 1, 3); // true
+    cout << findParent(parent, 1, 5); // false
 }

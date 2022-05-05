@@ -69,8 +69,6 @@ int main(){
         unionParent(parent, v[i].node1, v[i].node2);
         sum += v[i].distance;
     }
-
     cout << sum << endl;
-
 }
 
