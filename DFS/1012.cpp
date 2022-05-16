@@ -1,7 +1,9 @@
+// dfs
 #include <iostream>
 #include <vector>
 #include <cstring>
 using namespace std;
+
 int test_cnt;
 int m, n;
 int k;
@@ -14,6 +16,7 @@ int graph[51][51];
 bool visited[51][51];
 int cnt = 0;
 vector<int> v;
+
 void DFS(int x, int y ){
     visited[x][y] = true;
     for(int i = 0; i < 4; i++){
