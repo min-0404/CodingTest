@@ -11,7 +11,7 @@ int main(){
         int x;
         cin >> x;
         p[i] = x; 
-    }
+    } 
 
     sort(p + 1, p + n + 1);
     int total = 0;
@@ -24,3 +24,5 @@ int main(){
     }
     cout << total;
 }
+
+
